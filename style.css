@@ -104,7 +104,7 @@ body {
 
 .hero-title {
   margin: 0;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Anton", sans-serif;
   font-size: clamp(5rem, 17vw, 12rem);
   line-height: 0.9;
   letter-spacing: 0.02em;
@@ -175,7 +175,7 @@ body {
 
 .route-content h2 {
   margin: 0 0 10px 0;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Anton", sans-serif;
   font-size: 2rem;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -303,7 +303,7 @@ body {
 
 .stage-title {
   margin: 0 0 24px 0;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Anton", sans-serif;
   font-size: clamp(4rem, 11vw, 9rem);
   line-height: 0.88;
   letter-spacing: 0.04em;
@@ -404,7 +404,7 @@ body {
 
 .stage-card-content h2 {
   margin: 0 0 10px 0;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Anton", sans-serif;
   font-size: 2rem;
   line-height: 0.95;
   letter-spacing: 0.03em;
@@ -500,7 +500,7 @@ body {
 
 .stage-card-content h2 {
   margin: 0 0 10px 0;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Anton", sans-serif;
   font-size: 2rem;
   line-height: 0.95;
   letter-spacing: 0.03em;
@@ -599,7 +599,7 @@ body {
 
 .stage-card-content h2 {
   margin: 0 0 10px 0;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Anton", sans-serif;
   font-size: 2rem;
   line-height: 0.95;
   letter-spacing: 0.03em;
@@ -709,7 +709,7 @@ body {
 
 .music-title {
   margin: 0 0 24px 0;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Anton", sans-serif;
   font-size: clamp(4rem, 11vw, 9rem);
   line-height: 0.88;
   letter-spacing: 0.04em;
@@ -787,7 +787,7 @@ body {
 
 .music-feature-card h2 {
   margin: 0 0 16px 0;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Anton", sans-serif;
   font-size: 2.8rem;
   line-height: 0.95;
   letter-spacing: 0.03em;
@@ -897,7 +897,7 @@ body {
 
 .music-info-panel h2 {
   margin: 0 0 12px 0;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Anton", sans-serif;
   font-size: clamp(2.8rem, 6vw, 5.5rem);
   line-height: 0.95;
   letter-spacing: 0.03em;
@@ -967,7 +967,7 @@ body {
 
 .music-info-panel h2 {
   margin: 0 0 12px 0;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Anton", sans-serif;
   font-size: 2.8rem;
   line-height: 0.95;
   letter-spacing: 0.03em;
@@ -1127,7 +1127,7 @@ body {
 
 .about-title {
   margin: 0 0 24px 0;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Anton", sans-serif;
   font-size: clamp(4rem, 11vw, 9rem);
   line-height: 0.88;
   letter-spacing: 0.04em;
@@ -1187,7 +1187,7 @@ body {
 
 .about-profile-card h2 {
   margin: 0 0 16px 0;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Anton", sans-serif;
   font-size: 2.5rem;
   line-height: 0.95;
   letter-spacing: 0.04em;
