@@ -1,0 +1,222 @@
+.log-shell {
+  grid-template-rows: auto auto auto 1fr;
+}
+
+.log-hero .page-kicker {
+  color: var(--accent-2);
+}
+
+.log-stickers span:nth-child(2) {
+  color: var(--accent);
+}
+
+.log-stickers span:nth-child(4) {
+  color: var(--accent-2);
+}
+
+.log-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
+
+.meta-panel {
+  border: 1px solid var(--line);
+  background: var(--panel-soft);
+  padding: var(--space-4);
+  min-height: 108px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.meta-label,
+.sidebar-label {
+  margin: 0 0 12px 0;
+  font-size: 0.76rem;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.meta-panel p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.accent-panel {
+  border-color: rgba(47, 92, 255, 0.45);
+  box-shadow: inset 0 0 0 1px rgba(47, 92, 255, 0.18);
+}
+
+.log-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.log-sidebar {
+  position: sticky;
+  top: var(--space-4);
+  padding: var(--space-4);
+  display: grid;
+  gap: var(--space-4);
+}
+
+.sidebar-block {
+  display: grid;
+  gap: 12px;
+}
+
+.log-filter-nav {
+  display: grid;
+  gap: 8px;
+}
+
+.log-filter-nav a {
+  text-decoration: none;
+  border: 1px solid var(--line);
+  padding: 12px 14px;
+  background: var(--panel-soft);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  transition: background var(--transition), border-color var(--transition), color var(--transition);
+}
+
+.log-filter-nav a:hover,
+.log-filter-nav a.is-active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
+.pinned-card {
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(47, 92, 255, 0.08), rgba(255,255,255,0.02));
+  padding: var(--space-4);
+}
+
+.pinned-card h2 {
+  margin: 14px 0 12px 0;
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  line-height: 0.95;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.pinned-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.sidebar-links {
+  display: grid;
+  gap: 10px;
+}
+
+.log-feed {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.log-entry {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  padding: var(--space-4);
+  transition: border-color var(--transition), transform var(--transition), background var(--transition);
+}
+
+.log-entry:hover {
+  border-color: var(--line-strong);
+  background: #101010;
+  transform: translateY(-2px);
+}
+
+.featured-entry {
+  background:
+    linear-gradient(90deg, rgba(243, 234, 0, 0.08), transparent 28%),
+    linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.005));
+  border-color: rgba(243, 234, 0, 0.35);
+}
+
+.entry-topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 18px;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.entry-date {
+  color: var(--muted);
+}
+
+.entry-tag {
+  color: var(--accent-2);
+}
+
+.entry-main {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.entry-index {
+  font-size: 0.85rem;
+  color: var(--muted);
+  padding-top: 6px;
+}
+
+.entry-copy h2 {
+  margin: 0 0 12px 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 3.3rem);
+  line-height: 0.92;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.entry-copy p {
+  margin: 0;
+  max-width: 56rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 1100px) {
+  .log-meta-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .log-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .log-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 700px) {
+  .log-meta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .entry-main {
+    grid-template-columns: 1fr;
+  }
+
+  .entry-index {
+    padding-top: 0;
+  }
+}
