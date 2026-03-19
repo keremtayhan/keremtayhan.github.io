@@ -1,3 +1,25 @@
+.stage-stickers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.stage-stickers span {
+  border: none;
+  background: transparent;
+  padding: 0;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+}
+
+.stage-stickers span:nth-child(2) {
+  color: var(--accent);
+}
+
+.stage-stickers span:nth-child(3) {
+  color: var(--accent-2);
+}
 .stage-page {
   position: relative;
   min-height: 100vh;
