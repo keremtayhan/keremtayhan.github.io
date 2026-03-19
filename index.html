@@ -4,45 +4,69 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IMDAT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="landing-page">
-  <div class="noise"></div>
-  <div class="vignette"></div>
+  <div class="grid-overlay"></div>
+  <div class="noise-overlay"></div>
 
-  <main class="landing-shell">
-    <p class="eyebrow">PERSONAL SYSTEM / LIVE</p>
+  <main class="shell">
+    <header class="topbar">
+      <div class="topbar-left">IMDAT / PERSONAL SYSTEM</div>
+      <div class="topbar-right">
+        <span>ONLINE</span>
+        <span>2026</span>
+      </div>
+    </header>
 
-    <section class="hero">
-      <h1 class="hero-title">IMDAT</h1>
-      <p class="hero-subtitle">you are about to enter hell</p>
-      <p class="hero-description">
-        games, music, logs, experiments, unfinished prophecies
-      </p>
+    <section class="hero-layout">
+      <div class="hero-main">
+        <p class="kicker">games / music / logs / experiments</p>
+        <h1 class="hero-title">
+          IMDAT<br>
+          TODAY
+        </h1>
+        <p class="hero-note">
+          a personal interface for code, sound, systems, and unfinished prophecies
+        </p>
+      </div>
+
+      <aside class="floating-tags">
+        <span>PUBLIC ACCESS</span>
+        <span>SAINT NOTHING</span>
+        <span>GAME DEV</span>
+        <span>WORK IN PROGRESS</span>
+      </aside>
     </section>
 
-    <section class="entry-panel">
-      <button class="entry-button stage-button" onclick="enterStage()">
-        <span class="button-index">01</span>
-        <span class="button-text">
-          <strong>ENTER STAGE</strong>
-          <small>public access</small>
-        </span>
+    <section class="entry-grid">
+      <button class="route-card" onclick="enterStage()">
+        <div class="route-index">01</div>
+        <div class="route-content">
+          <h2>ENTER STAGE</h2>
+          <p>public-facing archive, projects, music, logs</p>
+        </div>
       </button>
 
-      <button class="entry-button terminal-button" onclick="enterAdmin()">
-        <span class="button-index">02</span>
-        <span class="button-text">
-          <strong>ACCESS TERMINAL</strong>
-          <small>restricted route</small>
-        </span>
+      <button class="route-card terminal-route" onclick="enterAdmin()">
+        <div class="route-index">02</div>
+        <div class="route-content">
+          <h2>ACCESS TERMINAL</h2>
+          <p>restricted route, control room, future admin access</p>
+        </div>
       </button>
     </section>
 
-    <footer class="landing-footer">
-      <span>imdat.today</span>
-      <span>system online</span>
-    </footer>
+    <nav class="bottom-nav">
+      <a href="projects.html">PROJECTS</a>
+      <a href="music.html">MUSIC</a>
+      <a href="log.html">LOG</a>
+      <a href="about.html">ABOUT</a>
+      <a href="playground.html">PLAYGROUND</a>
+    </nav>
   </main>
 
   <script src="script.js"></script>
