@@ -1,36 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IMDAT / MUSIC</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body class="music-page">
+  <div class="grid-overlay"></div>
+  <div class="noise-overlay"></div>
+
   <main class="music-shell">
-    <nav class="topbar">
-      <a href="stage.html">← back to stage</a>
-    </nav>
+    <header class="music-topbar">
+      <div>IMDAT / MUSIC</div>
+      <div class="music-topbar-right">
+        <span>SIGNAL ARCHIVE</span>
+        <a href="stage.html">BACK</a>
+      </div>
+    </header>
 
     <section class="music-hero">
-      <p class="system-label">PARTITION 02</p>
-      <h1>MUSIC</h1>
-      <p class="music-tagline">signal, memory, distortion</p>
-    </section>
-
-    <section class="featured-release">
-      <div class="release-art">
-        <div class="art-placeholder">ARTWORK</div>
+      <div class="music-hero-main">
+        <p class="music-kicker">PARTITION 02 / SOUND SYSTEM</p>
+        <h1 class="music-title">MUSIC</h1>
+        <p class="music-description">
+          saint nothing, signal, recordings, fragments, cover art, lyrics,
+          unfinished transmissions, and sound-world residue.
+        </p>
       </div>
 
-      <div class="release-info">
-        <p class="tiny-label">FEATURED RELEASE</p>
-        <h2>SAINT NOTHING — [TRACK NAME]</h2>
+      <div class="music-stickers">
+        <span>SAINT NOTHING</span>
+        <span>LIVE RECORDINGS</span>
+        <span>SONG FRAGMENTS</span>
+        <span>WORK IN PROGRESS</span>
+      </div>
+    </section>
+
+    <section class="music-feature-grid">
+      <div class="music-art-card">
+        <div class="music-art-placeholder">ARTWORK / COVER</div>
+      </div>
+
+      <div class="music-feature-card">
+        <p class="music-feature-label">FEATURED RELEASE</p>
+        <h2>TRACK TITLE / RELEASE NAME</h2>
         <p>
-          A short description goes here. Make it feel like a transmission,
-          not marketing copy.
+          A short transmission about the track goes here. Make it feel like a
+          fragment of a world rather than clean marketing copy.
         </p>
 
-        <div class="release-links">
+        <div class="music-links">
           <a href="#">LISTEN</a>
           <a href="#">LYRICS</a>
           <a href="#">VISUAL</a>
@@ -38,17 +61,24 @@
       </div>
     </section>
 
-    <section class="track-list">
+    <section class="track-panel">
+      <div class="track-panel-header">
+        <span>TRACK INDEX</span>
+        <span>ARCHIVE / PARTIAL</span>
+      </div>
+
       <div class="track-row">
         <span>01</span>
         <span>CRIMINAL</span>
         <span>03:41</span>
       </div>
+
       <div class="track-row">
         <span>02</span>
         <span>SUMMER SYSTEM</span>
         <span>04:12</span>
       </div>
+
       <div class="track-row">
         <span>03</span>
         <span>OPEN CASKET</span>
