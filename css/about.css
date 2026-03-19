@@ -1,0 +1,141 @@
+.about-page {
+  position: relative;
+  min-height: 100vh;
+}
+
+.about-shell {
+  grid-template-rows: auto auto auto 1fr;
+}
+
+.about-hero-main {
+  background:
+    var(--panel-grad),
+    linear-gradient(135deg, rgba(243, 234, 0, 0.04), transparent 40%);
+}
+
+.about-kicker {
+  color: var(--accent-2);
+}
+
+.about-stickers span:nth-child(2) {
+  color: var(--accent);
+}
+
+.about-stickers span:nth-child(4) {
+  color: var(--accent-2);
+}
+
+.about-main-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: var(--space-4);
+}
+
+.about-label {
+  margin: 0 0 14px 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.about-profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about-profile-card h2 {
+  margin: 0 0 16px 0;
+  font-family: var(--font-display);
+  font-size: 3rem;
+  line-height: 0.92;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.about-short {
+  margin: 0 0 22px 0;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 0.92rem;
+}
+
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.about-tags span {
+  border: 1px solid var(--line);
+  background: var(--panel-soft);
+  padding: 10px 12px;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+}
+
+.about-text-card p {
+  margin: 0 0 16px 0;
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 0.94rem;
+}
+
+.about-text-card p:last-child {
+  margin-bottom: 0;
+}
+
+.about-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+.about-info-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-info-box li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.about-info-box li:last-child {
+  border-bottom: none;
+}
+
+.about-portrait {
+  margin: 0 0 18px 0;
+  width: 100%;
+  max-width: 320px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.03);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.about-portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: #050505;
+  filter: contrast(1.08) brightness(0.96);
+}
+
+@media (max-width: 900px) {
+  .about-main-grid,
+  .about-info-grid {
+    grid-template-columns: 1fr;
+  }
+}

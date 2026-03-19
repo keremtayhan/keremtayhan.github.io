@@ -1,0 +1,167 @@
+.stage-page {
+  position: relative;
+  min-height: 100vh;
+}
+
+.stage-shell {
+  grid-template-rows: auto auto 1fr;
+}
+
+.stage-kicker {
+  color: var(--accent-2);
+  font-size: 1.08rem;
+}
+
+.stage-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  grid-template-areas:
+    "projects music log"
+    "projects about playground";
+  gap: var(--space-4);
+}
+
+.stage-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 180px;
+  padding: var(--space-4);
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--text);
+  text-decoration: none;
+  transition: transform var(--transition), border-color var(--transition), background var(--transition);
+}
+
+.stage-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--text);
+  background: #101010;
+}
+
+.stage-card-large {
+  min-height: 380px;
+}
+
+.stage-card-number {
+  font-size: 0.82rem;
+  color: var(--muted);
+  opacity: 0.8;
+  transition: opacity var(--transition);
+}
+
+.stage-card:hover .stage-card-number {
+  opacity: 1;
+}
+
+.stage-card-content h2 {
+  margin: 0 0 10px 0;
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  line-height: 0.92;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  transition: transform var(--transition), color var(--transition);
+}
+
+.stage-card:hover .stage-card-content h2 {
+  transform: translateX(4px);
+}
+
+.stage-card-content p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+  font-size: 0.88rem;
+  max-width: 28rem;
+}
+
+.stage-card::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 1px;
+  margin-top: 18px;
+  background: rgba(255,255,255,0.16);
+  transition: width var(--transition), background var(--transition);
+}
+
+.stage-card:hover::after {
+  width: 120px;
+  background: rgba(255,255,255,0.38);
+}
+
+.projects-card {
+  grid-area: projects;
+  background:
+    var(--panel-grad),
+    linear-gradient(135deg, rgba(243, 234, 0, 0.06), transparent 35%);
+}
+
+.projects-card .stage-card-content h2 {
+  font-size: 3rem;
+}
+
+.music-card-stage {
+  grid-area: music;
+  border-color: rgba(47, 92, 255, 0.4);
+  background:
+    var(--panel-grad),
+    linear-gradient(135deg, rgba(47, 92, 255, 0.08), transparent 42%);
+}
+
+.music-card-stage:hover {
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+
+.music-card-stage .stage-card-content h2 {
+  color: #dfe6ff;
+}
+
+.log-card {
+  grid-area: log;
+  background:
+    var(--panel-grad),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,0.02),
+      rgba(255,255,255,0.02) 1px,
+      transparent 1px,
+      transparent 28px
+    );
+}
+
+.about-card {
+  grid-area: about;
+  background: var(--panel-grad);
+}
+
+.playground-card {
+  grid-area: playground;
+  background:
+    var(--panel-grad),
+    linear-gradient(135deg, rgba(243, 234, 0, 0.05), transparent 55%);
+}
+
+.playground-card:hover {
+  border-color: var(--accent-2);
+  box-shadow: inset 0 0 0 1px rgba(243, 234, 0, 0.35);
+}
+
+@media (max-width: 900px) {
+  .stage-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "projects"
+      "music"
+      "log"
+      "about"
+      "playground";
+  }
+
+  .stage-card-large {
+    min-height: 220px;
+  }
+}
