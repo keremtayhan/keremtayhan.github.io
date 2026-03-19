@@ -537,3 +537,102 @@ body {
   width: 120px;
   background: rgba(255,255,255,0.38);
 }
+
+.projects-card {
+  grid-area: projects;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.005)),
+    linear-gradient(135deg, rgba(243, 234, 0, 0.06), transparent 35%);
+}
+
+.projects-card .stage-card-content h2 {
+  font-size: 2.8rem;
+}
+
+.music-card-stage {
+  grid-area: music;
+  border-color: rgba(47, 92, 255, 0.4);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.005)),
+    linear-gradient(135deg, rgba(47, 92, 255, 0.08), transparent 42%);
+}
+
+.music-card-stage:hover {
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+
+.music-card-stage .stage-card-content h2 {
+  color: #dfe6ff;
+}
+
+.about-card {
+  grid-area: about;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.005));
+}
+
+.playground-card {
+  grid-area: playground;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.005)),
+    linear-gradient(135deg, rgba(243, 234, 0, 0.05), transparent 55%);
+}
+
+.playground-card:hover {
+  border-color: var(--accent-2);
+  box-shadow: inset 0 0 0 1px rgba(243, 234, 0, 0.35);
+}
+
+.stage-grid > a:nth-child(3) {
+  grid-area: log;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.005)),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,0.02),
+      rgba(255,255,255,0.02) 1px,
+      transparent 1px,
+      transparent 28px
+    );
+}
+
+.stage-card-content h2 {
+  margin: 0 0 10px 0;
+  font-family: "Anton", sans-serif;
+  font-size: 2rem;
+  line-height: 0.95;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  transition: transform 0.18s ease, color 0.18s ease;
+}
+
+.stage-card:hover .stage-card-content h2 {
+  transform: translateX(4px);
+}
+
+.stage-card-number {
+  font-size: 0.82rem;
+  color: var(--muted);
+  opacity: 0.8;
+  transition: opacity 0.18s ease;
+}
+
+.stage-card:hover .stage-card-number {
+  opacity: 1;
+}
+
+.stage-card::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 1px;
+  margin-top: 18px;
+  background: rgba(255,255,255,0.16);
+  transition: width 0.18s ease, background 0.18s ease;
+}
+
+.stage-card:hover::after {
+  width: 120px;
+  background: rgba(255,255,255,0.38);
+}
