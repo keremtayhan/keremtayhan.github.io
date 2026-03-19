@@ -1,8 +1,78 @@
-.stage-stickers {
+.stage-page {
+  position: relative;
+  min-height: 100vh;
+  background: #050505;
+  color: var(--text);
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.stage-shell {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  padding: 18px;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  gap: 18px;
+}
+
+.stage-topbar {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--line);
+  padding: 10px 14px;
+  background: rgba(0, 0, 0, 0.55);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+}
+
+.stage-topbar-right {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.stage-topbar a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.stage-topbar a:hover {
+  color: var(--accent);
+}
+
+.stage-hero {
+  display: grid;
+  grid-template-columns: 1.4fr 0.7fr;
+  gap: 18px;
+}
+
+.stage-hero-main {
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.02);
+  padding: 24px;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stage-kicker {
+  margin: 0 0 22px 0;
+  color: var(--accent-2);
+  font-size: 1.08rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.stage-title {
+  margin: 0 0 24px 0;
+  font-family: "Anton", sans-serif;
+  font-size: clamp(4rem, 11vw, 9rem);
+  line-height: 0.88;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .stage-description {
@@ -14,10 +84,15 @@
   margin-bottom: 8px;
 }
 
+.stage-stickers {
+  display: grid;
+  gap: 10px;
+}
+
 .stage-stickers span {
-  border: none;
-  background: transparent;
-  padding: 0;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.03);
+  padding: 12px 14px;
   font-size: 0.82rem;
   letter-spacing: 0.08em;
 }
@@ -29,19 +104,6 @@
 .stage-stickers span:nth-child(3) {
   color: var(--accent-2);
 }
-.stage-page {
-  position: relative;
-  min-height: 100vh;
-}
-
-.stage-shell {
-  grid-template-rows: auto auto 1fr;
-}
-
-.stage-kicker {
-  color: var(--accent-2);
-  font-size: 1.08rem;
-}
 
 .stage-grid {
   display: grid;
@@ -49,7 +111,7 @@
   grid-template-areas:
     "projects music log"
     "projects about playground";
-  gap: var(--space-4);
+  gap: 18px;
 }
 
 .stage-card {
@@ -57,12 +119,12 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 180px;
-  padding: var(--space-4);
+  padding: 18px;
   border: 1px solid var(--line);
-  background: var(--panel);
+  background: #0b0b0b;
   color: var(--text);
   text-decoration: none;
-  transition: transform var(--transition), border-color var(--transition), background var(--transition);
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
 }
 
 .stage-card:hover {
@@ -75,29 +137,44 @@
   min-height: 380px;
 }
 
+.projects-card {
+  grid-area: projects;
+}
+
+.music-card-stage {
+  grid-area: music;
+  border-color: rgba(47, 92, 255, 0.4);
+}
+
+.music-card-stage:hover {
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+
+.about-card {
+  grid-area: about;
+}
+
+.playground-card {
+  grid-area: playground;
+}
+
+.stage-grid > a:nth-child(3) {
+  grid-area: log;
+}
+
 .stage-card-number {
   font-size: 0.82rem;
   color: var(--muted);
-  opacity: 0.8;
-  transition: opacity var(--transition);
-}
-
-.stage-card:hover .stage-card-number {
-  opacity: 1;
 }
 
 .stage-card-content h2 {
   margin: 0 0 10px 0;
-  font-family: var(--font-display);
-  font-size: 2.2rem;
-  line-height: 0.92;
-  letter-spacing: 0.02em;
+  font-family: "Anton", sans-serif;
+  font-size: 2rem;
+  line-height: 0.95;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
-  transition: transform var(--transition), color var(--transition);
-}
-
-.stage-card:hover .stage-card-content h2 {
-  transform: translateX(4px);
 }
 
 .stage-card-content p {
@@ -108,37 +185,42 @@
   max-width: 28rem;
 }
 
-.stage-card::after {
-  content: "";
-  display: block;
-  width: 72px;
-  height: 1px;
-  margin-top: 18px;
-  background: rgba(255,255,255,0.16);
-  transition: width var(--transition), background var(--transition);
-}
+@media (max-width: 900px) {
+  .stage-hero,
+  .stage-grid {
+    grid-template-columns: 1fr;
+  }
 
-.stage-card:hover::after {
-  width: 120px;
-  background: rgba(255,255,255,0.38);
+  .stage-grid {
+    grid-template-areas:
+      "projects"
+      "music"
+      "log"
+      "about"
+      "playground";
+  }
+
+  .stage-card-large {
+    min-height: 220px;
+  }
 }
 
 .projects-card {
   grid-area: projects;
   background:
-    var(--panel-grad),
+    linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.005)),
     linear-gradient(135deg, rgba(243, 234, 0, 0.06), transparent 35%);
 }
 
 .projects-card .stage-card-content h2 {
-  font-size: 3rem;
+  font-size: 2.8rem;
 }
 
 .music-card-stage {
   grid-area: music;
   border-color: rgba(47, 92, 255, 0.4);
   background:
-    var(--panel-grad),
+    linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.005)),
     linear-gradient(135deg, rgba(47, 92, 255, 0.08), transparent 42%);
 }
 
@@ -151,10 +233,28 @@
   color: #dfe6ff;
 }
 
-.log-card {
+.about-card {
+  grid-area: about;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.005));
+}
+
+.playground-card {
+  grid-area: playground;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.005)),
+    linear-gradient(135deg, rgba(243, 234, 0, 0.05), transparent 55%);
+}
+
+.playground-card:hover {
+  border-color: var(--accent-2);
+  box-shadow: inset 0 0 0 1px rgba(243, 234, 0, 0.35);
+}
+
+.stage-grid > a:nth-child(3) {
   grid-area: log;
   background:
-    var(--panel-grad),
+    linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.005)),
     repeating-linear-gradient(
       0deg,
       rgba(255,255,255,0.02),
@@ -164,15 +264,84 @@
     );
 }
 
+.stage-card-content h2 {
+  margin: 0 0 10px 0;
+  font-family: "Anton", sans-serif;
+  font-size: 2rem;
+  line-height: 0.95;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  transition: transform 0.18s ease, color 0.18s ease;
+}
+
+.stage-card:hover .stage-card-content h2 {
+  transform: translateX(4px);
+}
+
+.stage-card-number {
+  font-size: 0.82rem;
+  color: var(--muted);
+  opacity: 0.8;
+  transition: opacity 0.18s ease;
+}
+
+.stage-card:hover .stage-card-number {
+  opacity: 1;
+}
+
+.stage-card::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 1px;
+  margin-top: 18px;
+  background: rgba(255,255,255,0.16);
+  transition: width 0.18s ease, background 0.18s ease;
+}
+
+.stage-card:hover::after {
+  width: 120px;
+  background: rgba(255,255,255,0.38);
+}
+
+.projects-card {
+  grid-area: projects;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.005)),
+    linear-gradient(135deg, rgba(243, 234, 0, 0.06), transparent 35%);
+}
+
+.projects-card .stage-card-content h2 {
+  font-size: 2.8rem;
+}
+
+.music-card-stage {
+  grid-area: music;
+  border-color: rgba(47, 92, 255, 0.4);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.005)),
+    linear-gradient(135deg, rgba(47, 92, 255, 0.08), transparent 42%);
+}
+
+.music-card-stage:hover {
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+
+.music-card-stage .stage-card-content h2 {
+  color: #dfe6ff;
+}
+
 .about-card {
   grid-area: about;
-  background: var(--panel-grad);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.005));
 }
 
 .playground-card {
   grid-area: playground;
   background:
-    var(--panel-grad),
+    linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.005)),
     linear-gradient(135deg, rgba(243, 234, 0, 0.05), transparent 55%);
 }
 
@@ -181,18 +350,55 @@
   box-shadow: inset 0 0 0 1px rgba(243, 234, 0, 0.35);
 }
 
-@media (max-width: 900px) {
-  .stage-grid {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "projects"
-      "music"
-      "log"
-      "about"
-      "playground";
-  }
+.stage-grid > a:nth-child(3) {
+  grid-area: log;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.005)),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,0.02),
+      rgba(255,255,255,0.02) 1px,
+      transparent 1px,
+      transparent 28px
+    );
+}
 
-  .stage-card-large {
-    min-height: 220px;
-  }
+.stage-card-content h2 {
+  margin: 0 0 10px 0;
+  font-family: "Anton", sans-serif;
+  font-size: 2rem;
+  line-height: 0.95;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  transition: transform 0.18s ease, color 0.18s ease;
+}
+
+.stage-card:hover .stage-card-content h2 {
+  transform: translateX(4px);
+}
+
+.stage-card-number {
+  font-size: 0.82rem;
+  color: var(--muted);
+  opacity: 0.8;
+  transition: opacity 0.18s ease;
+}
+
+.stage-card:hover .stage-card-number {
+  opacity: 1;
+}
+
+.stage-card::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 1px;
+  margin-top: 18px;
+  background: rgba(255,255,255,0.16);
+  transition: width 0.18s ease, background 0.18s ease;
+}
+
+.stage-card:hover::after {
+  width: 120px;
+  background: rgba(255,255,255,0.38);
 }
