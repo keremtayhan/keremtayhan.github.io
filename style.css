@@ -1,0 +1,243 @@
+body.stage-page {
+  background: radial-gradient(circle at top, #111 0%, #050505 45%, #000 100%);
+  color: white;
+  overflow: hidden;
+}
+
+.noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 3px 3px, 5px 5px;
+}
+
+.hub {
+  min-height: 100vh;
+  padding: 64px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.hub-header h1 {
+  font-size: clamp(3rem, 8vw, 7rem);
+  margin: 0;
+  letter-spacing: 0.15em;
+}
+
+.system-label {
+  margin: 0 0 12px 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.3em;
+  opacity: 0.55;
+}
+
+.hub-subtitle {
+  margin: 12px 0 0 0;
+  opacity: 0.65;
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  text-transform: lowercase;
+}
+
+.hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  max-width: 1100px;
+}
+
+.hub-card {
+  text-decoration: none;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.03);
+  min-height: 180px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.hub-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.08), transparent 45%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.hub-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,255,255,0.75);
+  background: rgba(255,255,255,0.06);
+}
+
+.hub-card:hover::before {
+  opacity: 1;
+}
+
+.hub-card h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  letter-spacing: 0.12em;
+}
+
+.hub-card p {
+  margin: 0;
+  opacity: 0.65;
+  line-height: 1.4;
+}
+
+.card-number {
+  font-size: 0.75rem;
+  opacity: 0.45;
+  letter-spacing: 0.25em;
+}
+
+.music-card {
+  border-color: rgba(255, 70, 120, 0.4);
+}
+
+.music-card:hover {
+  border-color: rgba(255, 70, 120, 1);
+  box-shadow: 0 0 24px rgba(255, 70, 120, 0.18);
+}
+
+body.music-page {
+  background: linear-gradient(180deg, #090909 0%, #000 100%);
+  color: white;
+}
+
+.music-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 36px 24px 80px;
+}
+
+.topbar {
+  margin-bottom: 40px;
+}
+
+.topbar a {
+  color: rgba(255,255,255,0.72);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+}
+
+.topbar a:hover {
+  color: white;
+}
+
+.music-hero {
+  margin-bottom: 48px;
+}
+
+.music-hero h1 {
+  font-size: clamp(3rem, 10vw, 7rem);
+  margin: 0;
+  letter-spacing: 0.16em;
+}
+
+.music-tagline {
+  margin-top: 12px;
+  font-size: 1.1rem;
+  opacity: 0.68;
+}
+
+.featured-release {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 28px;
+  align-items: stretch;
+  margin-bottom: 56px;
+}
+
+.release-art {
+  border: 1px solid rgba(255,255,255,0.16);
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.03);
+}
+
+.art-placeholder {
+  opacity: 0.4;
+  letter-spacing: 0.2em;
+}
+
+.release-info {
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.02);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.release-info h2 {
+  margin: 8px 0 16px;
+  font-size: 2rem;
+}
+
+.tiny-label {
+  margin: 0;
+  opacity: 0.5;
+  font-size: 0.8rem;
+  letter-spacing: 0.25em;
+}
+
+.release-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.release-links a {
+  color: white;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.28);
+  padding: 10px 14px;
+  transition: 0.2s ease;
+}
+
+.release-links a:hover {
+  background: white;
+  color: black;
+}
+
+.track-list {
+  border-top: 1px solid rgba(255,255,255,0.14);
+}
+
+.track-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 100px;
+  gap: 16px;
+  padding: 18px 4px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  letter-spacing: 0.06em;
+}
+
+.track-row:hover {
+  background: rgba(255,255,255,0.04);
+}
+
+@media (max-width: 800px) {
+  .featured-release {
+    grid-template-columns: 1fr;
+  }
+}
