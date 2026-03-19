@@ -1,20 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>imdat today</title>
-    <style>
-      body { margin: 0; min-height: 100vh; display: grid; place-items: center; font-family: system-ui, sans-serif; }
-      .wrap { text-align: center; padding: 24px; }
-      h1 { margin: 0; font-size: 48px; letter-spacing: 0.5px; }
-      p { margin: 12px 0 0; opacity: 0.7; }
-    </style>
-  </head>
-  <body>
-    <div class="wrap">
-      <h1>imdat</h1>
-      <p>online</p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMDAT</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="title">IMDAT</h1>
+    <p class="subtitle">you are about to enter</p>
+
+    <div class="buttons">
+      <button onclick="enterStage()">ENTER STAGE</button>
+      <button class="terminal" onclick="enterAdmin()">ACCESS TERMINAL</button>
     </div>
-  </body>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
