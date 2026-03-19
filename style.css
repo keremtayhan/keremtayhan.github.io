@@ -1257,3 +1257,25 @@ body {
   }
 }
 
+.about-portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  filter: contrast(1.1) brightness(0.95);
+}
+
+.about-portrait {
+  position: relative;
+}
+
+.about-portrait::after {
+  content: "LIVE SIGNAL";
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
