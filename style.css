@@ -1257,25 +1257,24 @@ body {
   }
 }
 
+.about-portrait {
+  margin: 0 0 18px 0;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.03);
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .about-portrait img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-
-  filter: contrast(1.1) brightness(0.95);
-}
-
-.about-portrait {
-  position: relative;
-}
-
-.about-portrait::after {
-  content: "LIVE SIGNAL";
-  position: absolute;
-  bottom: 8px;
-  left: 8px;
-  font-size: 0.7rem;
-  letter-spacing: 0.08em;
-  color: var(--accent);
+  object-fit: contain;
+  object-position: center;
+  filter: contrast(1.08) brightness(0.96);
+  border: 1px solid rgba(255,255,255,0.14);
 }
