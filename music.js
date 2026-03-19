@@ -2,8 +2,6 @@ const tracks = [
   {
     title: "MACHINA",
     caption: "saint nothing / selected transmission",
-    duration: "01:10",
-    artwork: "images/machina-cover.jpg",
     soundcloudPage: "https://soundcloud.com/saint0nothing/machina",
     youtube: "",
     embed: `<iframe
@@ -18,8 +16,6 @@ const tracks = [
   {
     title: "CRIMINAL",
     caption: "saint nothing / archive entry",
-    duration: "03:41",
-    artwork: "images/criminal-cover.jpg",
     soundcloudPage: "https://soundcloud.com/your-link-here",
     youtube: "",
     embed: `PASTE_SOUND_CLOUD_IFRAME_HERE`
@@ -27,15 +23,12 @@ const tracks = [
   {
     title: "OPEN CASKET",
     caption: "saint nothing / archive entry",
-    duration: "02:58",
-    artwork: "images/open-casket-cover.jpg",
     soundcloudPage: "https://soundcloud.com/your-link-here",
     youtube: "",
     embed: `PASTE_SOUND_CLOUD_IFRAME_HERE`
   }
 ];
 
-const artEl = document.getElementById("track-art");
 const titleEl = document.getElementById("track-title");
 const captionEl = document.getElementById("track-caption");
 const playerEl = document.getElementById("track-player");
@@ -49,11 +42,7 @@ function selectTrack(index) {
 
   titleEl.textContent = track.title;
   captionEl.textContent = track.caption;
-  artEl.src = track.artwork;
-  artEl.alt = `${track.title} artwork`;
-
   playerEl.innerHTML = track.embed;
-
   soundcloudLinkEl.href = track.soundcloudPage;
 
   if (track.youtube && track.youtube.trim() !== "") {
