@@ -1,25 +1,235 @@
 .music-page {
   position: relative;
   min-height: 100vh;
+  background: #050505;
+  color: var(--text);
+  font-family: "IBM Plex Mono", monospace;
 }
 
 .music-shell {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  padding: 18px;
+  display: grid;
   grid-template-rows: auto auto auto 1fr;
+  gap: 18px;
+}
+
+.music-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--line);
+  padding: 10px 14px;
+  background: rgba(0, 0, 0, 0.55);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+}
+
+.music-topbar-right {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.music-topbar a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.music-topbar a:hover {
+  color: var(--accent);
+}
+
+.music-hero {
+  display: grid;
+  grid-template-columns: 1.4fr 0.7fr;
+  gap: 18px;
 }
 
 .music-hero-main {
+  border: 1px solid var(--line);
   background:
-    var(--panel-grad),
+    linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.005)),
     linear-gradient(135deg, rgba(47, 92, 255, 0.08), transparent 40%);
+  padding: 24px;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .music-kicker {
+  margin: 0 0 22px 0;
   color: var(--accent);
+  font-size: 1.02rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.music-title {
+  margin: 0 0 24px 0;
+  font-family: "Anton", sans-serif;
+  font-size: clamp(4rem, 11vw, 9rem);
+  line-height: 0.88;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.music-description {
+  margin: 0;
+  max-width: 46rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.music-stickers {
+  display: grid;
+  gap: 10px;
+}
+
+.music-stickers span {
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.03);
+  padding: 12px 14px;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
 }
 
 .music-stickers span:nth-child(1),
 .music-stickers span:nth-child(3) {
   color: var(--accent);
+}
+
+.music-feature-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 18px;
+}
+
+.music-art-card,
+.music-feature-card {
+  border: 1px solid var(--line);
+  background: #0b0b0b;
+}
+
+.music-art-card {
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.005)),
+    linear-gradient(135deg, rgba(243, 234, 0, 0.05), transparent 45%);
+}
+
+.music-art-placeholder {
+  color: var(--muted);
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+}
+
+.music-feature-card {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.music-feature-label {
+  margin: 0 0 12px 0;
+  color: var(--accent-2);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.music-feature-card h2 {
+  margin: 0 0 16px 0;
+  font-family: "Anton", sans-serif;
+  font-size: 2.8rem;
+  line-height: 0.95;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.music-feature-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 0.9rem;
+}
+
+.music-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.music-links a {
+  text-decoration: none;
+  color: var(--text);
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.03);
+  padding: 12px 14px;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+
+.music-links a:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
+.track-panel {
+  border: 1px solid var(--line);
+  background: #0b0b0b;
+}
+
+.track-panel-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.track-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 100px;
+  gap: 16px;
+  padding: 18px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  transition: background 0.18s ease;
+}
+
+.track-row:hover {
+  background: rgba(47, 92, 255, 0.08);
+}
+
+.track-row:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 900px) {
+  .music-hero,
+  .music-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .track-row {
+    grid-template-columns: 60px 1fr 80px;
+  }
 }
 
 .music-display {
@@ -29,9 +239,9 @@
 .music-info-panel {
   border: 1px solid var(--line);
   background:
-    var(--panel-grad),
+    linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.005)),
     linear-gradient(135deg, rgba(47, 92, 255, 0.06), transparent 35%);
-  padding: var(--space-5);
+  padding: 24px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -48,10 +258,10 @@
 
 .music-info-panel h2 {
   margin: 0 0 12px 0;
-  font-family: var(--font-display);
-  font-size: clamp(3rem, 6vw, 5.5rem);
-  line-height: 0.92;
-  letter-spacing: 0.02em;
+  font-family: "Anton", sans-serif;
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  line-height: 0.95;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   max-width: 14ch;
 }
@@ -88,11 +298,11 @@
   text-decoration: none;
   color: var(--text);
   border: 1px solid var(--line);
-  background: var(--panel-soft);
+  background: rgba(255,255,255,0.03);
   padding: 12px 14px;
   font-size: 0.82rem;
   letter-spacing: 0.08em;
-  transition: background var(--transition), border-color var(--transition), color var(--transition);
+  transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
 }
 
 .music-links a:hover {
@@ -101,20 +311,71 @@
   color: white;
 }
 
-.track-panel {
-  border: 1px solid var(--line);
-  background: var(--panel);
+.music-info-panel {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-.track-panel-header {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 14px 18px;
-  border-bottom: 1px solid var(--line);
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
+.music-feature-label {
+  margin: 0 0 12px 0;
+  color: var(--accent-2);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.music-info-panel h2 {
+  margin: 0 0 12px 0;
+  font-family: "Anton", sans-serif;
+  font-size: 2.8rem;
+  line-height: 0.95;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.music-track-caption {
+  margin: 0 0 22px 0;
   color: var(--muted);
+  line-height: 1.7;
+  font-size: 0.9rem;
+}
+
+.custom-player-shell {
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.02);
+  padding: 12px;
+}
+
+.custom-player-shell iframe {
+  display: block;
+  width: 100%;
+  border: none;
+}
+
+.music-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.music-links a {
+  text-decoration: none;
+  color: var(--text);
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.03);
+  padding: 12px 14px;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+
+.music-links a:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
 }
 
 .track-row {
@@ -132,7 +393,7 @@
   cursor: pointer;
   font-size: 0.9rem;
   letter-spacing: 0.06em;
-  transition: background var(--transition), color var(--transition);
+  transition: background 0.18s ease, color 0.18s ease;
 }
 
 .track-row:hover {
@@ -149,7 +410,8 @@
 }
 
 @media (max-width: 900px) {
-  .track-row {
-    grid-template-columns: 60px 1fr 80px;
+  .music-display,
+  .music-hero {
+    grid-template-columns: 1fr;
   }
 }
