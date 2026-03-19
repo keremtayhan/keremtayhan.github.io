@@ -1,22 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IMDAT</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="landing-page">
+  <div class="noise"></div>
+  <div class="vignette"></div>
 
-  <div class="container">
-    <h1 class="title">IMDAT</h1>
-    <p class="subtitle">you are about to enter hell'</p>
+  <main class="landing-shell">
+    <p class="eyebrow">PERSONAL SYSTEM / LIVE</p>
 
-    <div class="buttons">
-      <button onclick="enterStage()">ENTER STAGE</button>
-      <button class="terminal" onclick="enterAdmin()">ACCESS TERMINAL</button>
-    </div>
-  </div>
+    <section class="hero">
+      <h1 class="hero-title">IMDAT</h1>
+      <p class="hero-subtitle">you are about to enter hell</p>
+      <p class="hero-description">
+        games, music, logs, experiments, unfinished prophecies
+      </p>
+    </section>
+
+    <section class="entry-panel">
+      <button class="entry-button stage-button" onclick="enterStage()">
+        <span class="button-index">01</span>
+        <span class="button-text">
+          <strong>ENTER STAGE</strong>
+          <small>public access</small>
+        </span>
+      </button>
+
+      <button class="entry-button terminal-button" onclick="enterAdmin()">
+        <span class="button-index">02</span>
+        <span class="button-text">
+          <strong>ACCESS TERMINAL</strong>
+          <small>restricted route</small>
+        </span>
+      </button>
+    </section>
+
+    <footer class="landing-footer">
+      <span>imdat.today</span>
+      <span>system online</span>
+    </footer>
+  </main>
 
   <script src="script.js"></script>
 </body>
