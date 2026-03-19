@@ -1,49 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IMDAT / STAGE</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body class="stage-page">
-  <div class="noise"></div>
+  <div class="grid-overlay"></div>
+  <div class="noise-overlay"></div>
 
-  <main class="hub">
-    <div class="hub-header">
-      <p class="system-label">PUBLIC ACCESS</p>
-      <h1>ENTER STAGE</h1>
-      <p class="hub-subtitle">select a partition</p>
-    </div>
+  <main class="stage-shell">
+    <header class="stage-topbar">
+      <div>IMDAT / STAGE MODE</div>
+      <div class="stage-topbar-right">
+        <span>PUBLIC DIRECTORY</span>
+        <a href="index.html">EXIT</a>
+      </div>
+    </header>
 
-    <section class="hub-grid">
-      <a class="hub-card" href="projects.html">
-        <span class="card-number">01</span>
-        <h2>PROJECTS</h2>
-        <p>games, systems, experiments</p>
+    <section class="stage-hero">
+      <div class="stage-hero-main">
+        <p class="stage-kicker">SELECT A PARTITION</p>
+        <h1 class="stage-title">STAGE</h1>
+        <p class="stage-description">
+          this is the public layer. projects, music, logs, profile, experiments,
+          and unfinished transmissions live here.
+        </p>
+      </div>
+
+      <div class="stage-stickers">
+        <span>LIVE SITE</span>
+        <span>GAME DEV</span>
+        <span>MUSIC / SIGNAL</span>
+        <span>UNDER CONSTRUCTION</span>
+      </div>
+    </section>
+
+    <section class="stage-grid">
+      <a class="stage-card stage-card-large projects-card" href="projects.html">
+        <div class="stage-card-number">01</div>
+        <div class="stage-card-content">
+          <h2>PROJECTS</h2>
+          <p>games, systems, tools, prototypes, digital machinery</p>
+        </div>
       </a>
 
-      <a class="hub-card music-card" href="music.html">
-        <span class="card-number">02</span>
-        <h2>MUSIC</h2>
-        <p>signal, songs, releases</p>
+      <a class="stage-card music-card-stage" href="music.html">
+        <div class="stage-card-number">02</div>
+        <div class="stage-card-content">
+          <h2>MUSIC</h2>
+          <p>saint nothing, signal, releases, fragments, sound-world</p>
+        </div>
       </a>
 
-      <a class="hub-card" href="log.html">
-        <span class="card-number">03</span>
-        <h2>LOG</h2>
-        <p>dev thoughts and transmissions</p>
+      <a class="stage-card" href="log.html">
+        <div class="stage-card-number">03</div>
+        <div class="stage-card-content">
+          <h2>LOG</h2>
+          <p>development notes, process, observations, transmissions</p>
+        </div>
       </a>
 
-      <a class="hub-card" href="about.html">
-        <span class="card-number">04</span>
-        <h2>ABOUT</h2>
-        <p>profile, intent, becoming</p>
+      <a class="stage-card about-card" href="about.html">
+        <div class="stage-card-number">04</div>
+        <div class="stage-card-content">
+          <h2>ABOUT</h2>
+          <p>profile, intent, identity, trajectory</p>
+        </div>
       </a>
 
-      <a class="hub-card" href="playground.html">
-        <span class="card-number">05</span>
-        <h2>PLAYGROUND</h2>
-        <p>weird interactive things</p>
+      <a class="stage-card playground-card" href="playground.html">
+        <div class="stage-card-number">05</div>
+        <div class="stage-card-content">
+          <h2>PLAYGROUND</h2>
+          <p>weird interactive things, scraps, tests, side realities</p>
+        </div>
       </a>
     </section>
   </main>
