@@ -3,11 +3,5 @@ function enterStage() {
 }
 
 function enterAdmin() {
-  const password = prompt("ENTER PASSWORD");
-
-  if (password === "1234") {
-    window.location.href = "admin.html";
-  } else if (password !== null) {
-    alert("ACCESS DENIED");
-  }
+  window.location.href = "admin.html";
 }
