@@ -1,0 +1,28 @@
+{
+  "name": "imdat-today",
+  "version": "1.0.0",
+  "description": "IMDAT personal website and admin system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "init-db": "node --env-file=.env.local scripts/init-db.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keremtayhan/keremtayhan.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/keremtayhan/keremtayhan.github.io/issues"
+  },
+  "homepage": "https://imdat.today",
+  "dependencies": {
+    "@libsql/client": "^0.17.2",
+    "bcryptjs": "^3.0.3",
+    "cookie": "^1.1.1",
+    "jsonwebtoken": "^9.0.3"
+  }
+}

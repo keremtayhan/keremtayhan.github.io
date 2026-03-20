@@ -220,3 +220,25 @@
     padding-top: 0;
   }
 }
+
+.log-entry-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.log-entry-link:hover .log-entry {
+  border-color: var(--line-strong);
+  background: #101010;
+  transform: translateY(-2px);
+}
+.log-entry {
+  transition: border-color var(--transition), transform var(--transition), background var(--transition);
+}
+
+.pinned-entry {
+  border-color: rgba(243, 234, 0, 0.35);
+  background:
+    linear-gradient(90deg, rgba(243, 234, 0, 0.08), transparent 28%),
+    linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.005));
+}

@@ -68,11 +68,11 @@
         <div class="sidebar-block">
           <p class="sidebar-label">FILTER</p>
           <nav class="log-filter-nav">
-            <a href="#" class="is-active">ALL</a>
-            <a href="#">DEV</a>
-            <a href="#">MUSIC</a>
-            <a href="#">LIFE</a>
-            <a href="#">RESEARCH</a>
+            <a href="#" data-filter="ALL" class="is-active">ALL</a>
+            <a href="#" data-filter="DEV">DEV</a>
+            <a href="#" data-filter="MUSIC">MUSIC</a>
+            <a href="#" data-filter="LIFE">LIFE</a>
+            <a href="#" data-filter="RESEARCH">RESEARCH</a>
           </nav>
         </div>
 
@@ -98,26 +98,10 @@
         </div>
       </aside>
 
-      <section class="log-feed">
-        <article class="log-entry featured-entry">
-          <div class="entry-topline">
-            <span class="entry-date">2026.03.20</span>
-            <span class="entry-tag">FEATURED</span>
-          </div>
-          <div class="entry-main">
-            <div class="entry-index">01</div>
-            <div class="entry-copy">
-              <h2>website system refactor / log page direction locked</h2>
-              <p>
-                split styles into separate files, stabilized the landing layout,
-                and started shaping the log into a readable archive instead of a dead page.
-                the goal is a hybrid between brutalist editorial design and terminal fiction.
-              </p>
-            </div>
-          </div>
-        </article>
-      </section>
+      <div id="log-container"></div>
+      <script src="js/log.js"></script>
     </section>
   </main>
+<script src="js/log.js"></script>
 </body>
 </html>

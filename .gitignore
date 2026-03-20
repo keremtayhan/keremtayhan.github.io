@@ -1,0 +1,22 @@
+# env files (VERY IMPORTANT)
+.env
+.env.local
+.env.*.local
+
+# node
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# vercel
+.vercel
+
+# optional
+*.log

@@ -1,0 +1,131 @@
+.admin-shell {
+  grid-template-rows: auto 1fr;
+}
+
+.admin-login-wrap {
+  display: grid;
+  place-items: center;
+  min-height: 72vh;
+}
+
+.admin-login-panel {
+  width: min(720px, 100%);
+}
+
+.admin-title {
+  margin-bottom: 26px;
+}
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.admin-form {
+  display: grid;
+  gap: 14px;
+}
+
+.admin-form label {
+  display: grid;
+  gap: 8px;
+}
+
+.admin-form span {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.admin-form input,
+.admin-form textarea,
+.admin-form select {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: #0c0c0c;
+  color: var(--text);
+  padding: 12px 14px;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+}
+
+.admin-form textarea {
+  resize: vertical;
+  min-height: 180px;
+}
+
+.admin-error {
+  color: #ff6b6b;
+  min-height: 1.4rem;
+}
+
+.admin-message {
+  color: var(--accent-2);
+  min-height: 1.4rem;
+  margin-top: 10px;
+}
+
+.admin-log-list {
+  display: grid;
+  gap: 12px;
+}
+
+.admin-log-item {
+  border: 1px solid var(--line);
+  background: var(--panel-soft);
+  padding: 14px;
+}
+
+.admin-log-item .meta {
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+}
+
+.admin-log-item h3 {
+  margin: 0 0 10px 0;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.admin-log-item p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .admin-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.admin-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.admin-log-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+[hidden] {
+  display: none !important;
+}
+
+.admin-check {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-check input {
+  width: auto;
+  margin: 0;
+}
